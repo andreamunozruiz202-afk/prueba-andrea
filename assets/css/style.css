@@ -35,9 +35,19 @@ body {
 }
 
 /* ===== Franja naranja con el menú ===== */
+nav.menu {
+  background-color: #E7A55F; /* Naranja */
+  height: 100px; /* ← aquí ajustas la altura */
+  width: 100%;
+  padding: 3%;
+  align-items: center; /* centra verticalmente el menú */
+  justify-content: center; /* centra horizontalmente el menú */
+
+}
 nav {
   background-color: #E7A55F; /* Franja naranja */
-  padding: 30px 0;
+  padding: 150px 0; /* aumenta la altura */
+  width: 100%;
 }
 
 /* Lista horizontal */
@@ -86,7 +96,6 @@ nav a:hover {
 
 /* Nombre */
 .green-box h2 {
-  font-family: 'Poppins', sans-serif;
   font-family: 'Zen Kaku Gothic Antique', sans-serif;
   font-weight: 100;
   font-size: 2.5rem;
@@ -152,7 +161,7 @@ body {
 }
 
 .card h2 {
-  font-family: "Zen Dots", sans-serif;
+  font-family: 'Zen Dots', cursive;
   color: #000;
   font-size: 2.5rem;
   margin-bottom: 3%;
@@ -164,6 +173,11 @@ body {
   background-color: #9cd5e9;
   position: relative;
   top: -50px; /* ligeramente más arriba */
+}
+
+.card.intro p {
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-weight: 100;
 }
 
 /* Amarillo (Objetivos) */
@@ -183,6 +197,13 @@ body {
 
 .card.objetivos li {
   margin-bottom: 5px;
+   font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-weight: 100;
+}
+
+.card.objetivos p {
+   font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-weight: 100;
 }
 
 /* 
@@ -223,7 +244,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 80px 60px 40px 200px;
+  padding-left: 40%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   gap: 40px;
 }
 
@@ -248,7 +271,7 @@ body {
 }
 
 .ilustracion img {
-  width: 350px;
+  width: 400px;
   height: auto;
   right: 60%;
 }
@@ -263,7 +286,7 @@ body {
 
 /* Franja blanca con estrellas */
 .footer-stars {
-   background-color: white;
+  background-color: white;
   color: #9CD5E9;
   text-align: center;
   font-size: 3rem;

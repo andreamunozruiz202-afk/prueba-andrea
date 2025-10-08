@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+  
+@font-face {
+  font-family:"Gilroy";
+  src: url(../fonts/Gilroy-Regular.ttf);
+}
+
+body {
+  background-color: white;
+  font-family: 'Zen Dots', cursive;
+}
+
+.body h1, h2, h3 {
+  font-family: 'Zen Dots', cursive;
+  color: #E7A55F;
+}
+
+
+/* MENU */
+.stars {
+  background-color: white;
+  color: #9CD5E9;
+  text-align: center;
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 50;
+  white-space: nowrap; /* Evita saltos de línea */
+  overflow: hidden; /* Oculta las estrellas que no caben */
+  display: block;
+  padding: 7x 0;
+}
+
+/* ===== Franja naranja con el menú ===== */
+nav {
+  background-color: #E7A55F; /* Franja naranja */
+  padding: 30px 0;
+}
+
+/* Lista horizontal */
+nav ul {
+  list-style: none; /* Sin viñetas */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  gap: 17%; /* Espacio entre elementos */
+}
+
+/* Enlaces del menú */
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: 'Zen Dots', cursive;
+  transition: color 0.3s ease;
+}
+
+/* Efecto hover */
+nav a:hover {
+  color: white;
+}
+
+.green-box {
+  background-color: #53C197;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  width: 100%;
+  margin: 0; /* elimina márgenes laterales */
+  border-radius: 0; /* sin esquinas redondeadas */
+}
+
+/* Título principal */
+.green-box h1 {
+  font-family: 'Zen Dots', cursive;
+  font-size: 7rem;
+  color: black; /* igual al texto que se ve en la captura */
+  margin-bottom: 0.25rem;
+  letter-spacing: 2px;
+}
+
+/* Nombre */
+.green-box h2 {
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-weight: 100;
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: white;
+}
+
+/* foto menu */
+.main-image {
+  display: block;
+  width: 60%;          /* 🔹 más pequeña: ocupa solo el 45% del ancho */
+  height: auto;        /* mantiene proporciones */
+  margin: 5px auto 0;  /* 🔹 centrada + casi pegada al bloque verde */
+  margin-top: 4%;
+}
+
+/* ----------------------- RESET ----------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ----------------------- FUENTES ----------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&family=Zen+Kaku+Gothic+Antique:wght@300;400;500&display=swap');
+
+body {
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  background-color: #f8f8f8;
+  color: #000;
+}
+
+/* ----------------------- SECCIÓN INTRO/OBJETIVOS ----------------------- */
+.info-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: 
+    linear-gradient(white 0 0),
+    repeating-linear-gradient(#dcdcdc 0 1px, transparent 1px 40px),
+    repeating-linear-gradient(90deg, #dcdcdc 0 1px, transparent 1px 40px);
+  background-blend-mode: multiply;
+  background-size: cover;
+  padding: 120px 0;
+}
+
+/* Contenedor para colocar los cuadros */
+.info-cards {
+  display: flex;
+  gap: 100px;
+  position: relative;
+}
+
+/* ----------------------- TARJETAS ----------------------- */
+.card {
+  width: 450px;
+  padding: 35px 40px;
+  border-radius: 30px;
+  border-color: #000;
+}
+
+.card h2 {
+  font-family: "Zen Dots", sans-serif;
+  color: #000;
+  font-size: 2.5rem;
+  margin-bottom: 3%;
+  margin-top: 4%;
+}
+
+/* Azul (Introducción) */
+.card.intro {
+  background-color: #9cd5e9;
+  position: relative;
+  top: -50px; /* ligeramente más arriba */
+}
+
+/* Amarillo (Objetivos) */
+.card.objetivos {
+  background-color: #f3cd33;
+  position: relative;
+  top: 50px; /* ligeramente más abajo */
+}
+
+/* ----------------------- LISTA OBJETIVOS ----------------------- */
+.card.objetivos ol {
+  margin-left: 20px;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.card.objetivos li {
+  margin-bottom: 5px;
+}
+
+/* ----------------------- ENLACES ----------------------- */
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+

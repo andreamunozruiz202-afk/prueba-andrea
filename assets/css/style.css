@@ -237,6 +237,11 @@ body {
   line-height: 1rem;
   color: white;
   letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+ul li:hover {
+  color: #E7A55F;
 }
 
 /* Título e imagen */
@@ -279,10 +284,13 @@ body {
 /* Footer dentro del bloque verde */
 .footer-verde {
   padding: 10px 40px;
-  text-align: left;
-  font-size: 0.9rem;
-  color: #d9f4ea;
+  display: flex;
+  justify-content: left;
+  font-size: 1.5rem;
+  color: #FDD823;
+  padding-bottom: 1.5%;
 }
+
 
 /* Franja blanca con estrellas */
 .footer-stars {

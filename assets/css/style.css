@@ -197,53 +197,98 @@ body {
 
 .card.objetivos li {
   margin-bottom: 5px;
-   font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
   font-weight: 100;
 }
 
 .card.objetivos p {
-   font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
   font-weight: 100;
 }
 
 /* === SECCIÓN WEB 1 === */
 /* === SECCIÓN WEB 1 === */
 .web1-section {
-  width: 90%;
-  max-width: 950px;
-  margin: 60px auto;
+  margin: auto;
   background: #d1d1d1;
   padding: 40px;
   border-radius: 10px;
 }
 
 .web1-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-family: 'Zen dots', sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
   font-weight: 800;
+  margin-top: 30px;
   margin-bottom: 30px;
   letter-spacing: 2px;
   text-align: left;
 }
 
+/* === GALERÍA WEB 1 === */
 .web1-gallery {
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-  margin-bottom: 40px;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10%;
+  margin-top: 10%;
 }
 
-.web1-img {
-  width: 30%;
-  min-width: 220px;
-  border-radius: 8px;
+/* Imagen principal grande */
+.main-img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 10px;
+  object-fit: cover;
   transition: transform 0.3s ease;
   cursor: pointer;
 }
 
-.web1-img:hover {
+.main-img:hover {
+  transform: scale(1.03);
+}
+
+/* Fila de imágenes pequeñas */
+.web1-row {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.small-img {
+  width: calc(50% - 7px); /* Dos imágenes perfectamente alineadas */
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.small-img:hover {
   transform: scale(1.05);
 }
+
+/* === RESPONSIVE === */
+@media (max-width: 800px) {
+  .main-img {
+    width: 100%;
+  }
+
+  .web1-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .small-img {
+    width: 100%;
+  }
+}
+
+
 
 /* === ACORDEÓN === */
 .web1-accordion details {
@@ -251,11 +296,11 @@ body {
   margin-bottom: 10px;
   border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
 }
 
 .web1-accordion summary {
-  font-weight: 600;
+  font-family: 'Zen Dots', sans-serif;
+  font-weight: 500;
   padding: 15px 20px;
   cursor: pointer;
   font-size: 1.1rem;
@@ -287,6 +332,380 @@ body {
   }
 }
 
+/* === GALERÍA WEB 2 === */
+.web2-section {
+  margin: auto;
+  background-image: url("https://ik.imagekit.io/ipze59mvl/Textura_papel.jpg?updatedAt=1760557385995");
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.web2-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+
+/* Imagen principal grande */
+.main-img2 {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.main-img2:hover {
+  transform: scale(1.03);
+}
+
+/* Fila de imágenes pequeñas */
+.web2-row {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.small-img2 {
+  width: calc(50% - 7px); /* Dos imágenes perfectamente alineadas */
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.small-img2:hover {
+  transform: scale(1.05);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 800px) {
+  .main-img2 {
+    width: 100%;
+  }
+
+  .web2-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .small-img2 {
+    width: 100%;
+  }
+}
+
+
+
+/* === ACORDEÓN === */
+.web2-accordion details {
+  background: #c2c2c2;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.web2-title {
+  font-size: 3rem;
+  font-family: 'Zen dots', sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.web2-accordion summary {
+  font-family: 'Zen Dots', sans-serif;
+  font-weight: 500;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  position: relative;
+  list-style: none;
+}
+
+.web2-accordion summary::marker {
+  display: none;
+}
+
+.web2-accordion summary:hover {
+  background-color:  #b3b3b3;
+}
+
+.web2-accordion p {
+  padding: 15px 20px;
+  margin: 0;
+  background-color: #e6e6e6;
+  border-top: 1px solid #ccc;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .web2-img {
+    width: 45%;
+  }
+}
+
+/* WEB 3 */
+.web3-section {
+  margin: auto;
+  background-color: #dddde0;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.web3-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+
+/* Imagen principal grande */
+.main-img3 {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.main-img3:hover {
+  transform: scale(1.03);
+}
+
+/* Fila de imágenes pequeñas */
+.web3-row {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.small-img3 {
+  width: calc(50% - 7px); /* Dos imágenes perfectamente alineadas */
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.small-img3:hover {
+  transform: scale(1.05);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 800px) {
+  .main-img3 {
+    width: 100%;
+  }
+
+  .web3-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .small-img3 {
+    width: 100%;
+  }
+}
+
+
+
+/* === ACORDEÓN === */
+.web3-accordion details {
+  background: #c2c2c2;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.web3-title {
+  font-size: 3rem;
+  font-family: 'Zen dots', sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.web3-accordion summary {
+  font-family: 'Zen Dots', sans-serif;
+  font-weight: 500;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  position: relative;
+  list-style: none;
+  background-color: #c2c2c2;
+}
+
+.web3-accordion summary::marker {
+  display: none;
+}
+
+.web3-accordion summary:hover {
+  background-color: #b3b3b3 ;
+}
+
+.web3-accordion p {
+  padding: 15px 20px;
+  margin: 0;
+  background-color: #e6e6e6;
+  border-top: 1px solid #ccc;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .web3-img {
+    width: 45%;
+  }
+}
+
+/* WEB 4 */
+.web4-section {
+  margin: auto;
+  background-image: url("https://ik.imagekit.io/ipze59mvl/Textura_papel.jpg?updatedAt=1760557385995");
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.web4-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+
+/* Imagen principal grande */
+.main-img4 {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.main-img4:hover {
+  transform: scale(1.03);
+}
+
+/* Fila de imágenes pequeñas */
+.web4-row {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.small-img4 {
+  width: calc(50% - 7px); /* Dos imágenes perfectamente alineadas */
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.small-img4:hover {
+  transform: scale(1.05);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 800px) {
+  .main-img4 {
+    width: 100%;
+  }
+
+  .web4-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .small-img4 {
+    width: 100%;
+  }
+}
+
+
+
+/* === ACORDEÓN === */
+.web4-accordion details {
+  background: #c2c2c2;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.web4-title {
+  font-size: 3rem;
+  font-family: 'Zen dots', sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.web4-accordion summary {
+  font-family: 'Zen Dots', sans-serif;
+  font-weight: 500;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  position: relative;
+  list-style: none;
+}
+
+.web4-accordion summary::marker {
+  display: none;
+}
+
+.web4-accordion summary:hover {
+  background-color:  #b3b3b3;
+}
+
+.web4-accordion p {
+  padding: 15px 20px;
+  margin: 0;
+  background-color: #e6e6e6;
+  border-top: 1px solid #ccc;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .web4-img {
+    width: 45%;
+  }
+}
+
+
 
 /* 
  FOOTER */
@@ -297,6 +716,7 @@ body {
   position: relative;
   font-family: 'Zen Kaku Gothic Antique', sans-serif;
   overflow: hidden;
+  margin-top: 5%;
 }
 
 /* Menú lateral */

@@ -206,6 +206,86 @@ body {
   font-weight: 100;
 }
 
+/* === SECCIÓN WEB 1 === */
+.web1-section {
+  width: 90%;
+  max-width: 950px;
+  margin: 60px auto;
+  background: #d1d1d1;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.web1-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.web1-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.web1-img {
+  width: 30%;
+  min-width: 220px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.web1-img:hover {
+  transform: scale(1.05);
+}
+
+/* === ACORDEÓN === */
+.web1-accordion details {
+  background: #c2c2c2;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.web1-accordion summary {
+  font-weight: 600;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  position: relative;
+  list-style: none;
+}
+
+.web1-accordion summary::marker {
+  display: none;
+}
+
+.web1-accordion summary:hover {
+  background-color: #b3b3b3;
+}
+
+.web1-accordion p {
+  padding: 15px 20px;
+  margin: 0;
+  background-color: #e6e6e6;
+  border-top: 1px solid #ccc;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .web1-img {
+    width: 45%;
+  }
+}
+
 /* 
  FOOTER */
 /* ===== BLOQUE VERDE PRINCIPAL ===== */
@@ -223,6 +303,7 @@ body {
   left: 15%;
   top: 100px;
 }
+
 
 .menu-lateral ul {
   list-style: none;
@@ -306,4 +387,6 @@ ul li:hover {
   padding: 7x 0;
 }
 
- 
+ html {
+  scroll-behavior: smooth;
+}

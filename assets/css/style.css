@@ -3,112 +3,191 @@
   margin: 0;
   padding: 0;
 }
-  
+
 @font-face {
-  font-family:"Gilroy";
+  font-family: "Gilroy";
   src: url(../fonts/Gilroy-Regular.ttf);
 }
 
 body {
   background-color: white;
-  font-family: 'Zen Dots', cursive;
+  font-family: "Zen Dots", cursive;
 }
 
-.body h1, h2, h3 {
-  font-family: 'Zen Dots', cursive;
-  color: #E7A55F;
+.body h1,
+h2,
+h3 {
+  font-family: "Zen Dots", cursive;
+  color: #e7a55f;
 }
-
 
 /* MENU */
 .stars {
   background-color: white;
-  color: #9CD5E9;
+  color: #9cd5e9;
   text-align: center;
   font-size: 3rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 50;
-  white-space: nowrap; /* Evita saltos de línea */
-  overflow: hidden; /* Oculta las estrellas que no caben */
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
   display: block;
-  padding: 7x 0;
+  padding: 10px 0;
 }
 
-/* ===== Franja naranja con el menú ===== */
-nav.menu {
-  background-color: #E7A55F; /* Naranja */
-  height: 100px; /* ← aquí ajustas la altura */
+@media (max-width: 1200px) {
+  .stars {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .stars {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .stars {
+    font-size: 1.5rem;
+    padding: 5px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .stars {
+    font-size: 1rem;
+    padding: 3px 0;
+  }
+}
+
+/* === MENÚ PRINCIPAL === */
+.menu {
   width: 100%;
-  padding: 3%;
-  align-items: center; /* centra verticalmente el menú */
-  justify-content: center; /* centra horizontalmente el menú */
-
-}
-nav {
-  background-color: #E7A55F; /* Franja naranja */
-  padding: 150px 0; /* aumenta la altura */
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding: 20px 0;
+  background-image: url("https://ik.imagekit.io/ipze59mvl/Textura_papel.jpg?updatedAt=1760557385995");
 }
 
-/* Lista horizontal */
-nav ul {
-  list-style: none; /* Sin viñetas */
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 300px;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center; /* Centrar horizontalmente */
-  gap: 17%; /* Espacio entre elementos */
 }
 
-/* Enlaces del menú */
-nav a {
+.menu li {
+  font-family: "Zen Dots", cursive;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.menu a {
   text-decoration: none;
-  color: black;
-  font-weight: bold;
-  font-size: 1.5rem;
-  font-family: 'Zen Dots', cursive;
-  transition: color 0.3s ease;
+  color: #000;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
-/* Efecto hover */
-nav a:hover {
-  color: white;
+.menu a:hover {
+  color: #555;
+  transform: scale(1.05);
+}
+
+@media (max-width: 1250px) {
+  .menu ul {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 
 .green-box {
-  background-color: #53C197;
+  background-color: #53c197;
   color: white;
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
   width: 100%;
-  margin: 0; /* elimina márgenes laterales */
-  border-radius: 0; /* sin esquinas redondeadas */
+  margin: 0;
+  border-radius: 0;
 }
 
-/* Título principal */
 .green-box h1 {
-  font-family: 'Zen Dots', cursive;
+  font-family: "Zen Dots", cursive;
   font-size: 7rem;
-  color: black; /* igual al texto que se ve en la captura */
+  color: black;
   margin-bottom: 0.25rem;
   letter-spacing: 2px;
 }
 
-/* Nombre */
 .green-box h2 {
-  font-family: 'Zen Kaku Gothic Antique', sans-serif;
-  font-weight: 100;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-weight: 300;
   font-size: 2.5rem;
-  font-weight: normal;
   color: white;
+  margin: 0;
 }
 
-/* foto menu */
+.main-image {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  padding-bottom: 5%;
+  padding-top: 2%;
+  border-radius: 0;
+}
+
+@media (max-width: 1000px) {
+  .green-box {
+    padding: 60px 15px;
+  }
+
+  .green-box h1 {
+    font-size: 5rem;
+  }
+
+  .green-box h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .green-box {
+    padding: 50px 10px;
+  }
+
+  .green-box h1 {
+    font-size: 3.5rem;
+  }
+
+  .green-box h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .green-box {
+    padding: 40px 8px;
+  }
+
+  .green-box h1 {
+    font-size: 2.8rem;
+    letter-spacing: 1px;
+  }
+
+  .green-box h2 {
+    font-size: 1.3rem;
+  }
+}
+
 .main-image {
   display: block;
-  width: 60%;          /* 🔹 más pequeña: ocupa solo el 45% del ancho */
-  height: auto;        /* mantiene proporciones */
-  margin: 5px auto 0;  /* 🔹 centrada + casi pegada al bloque verde */
+  width: 60%;
+  height: auto;
+  margin: 5px auto 0;
   margin-top: 4%;
 }
 
@@ -120,7 +199,7 @@ nav a:hover {
 }
 
 /* ----------------------- FUENTES ----------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&family=Zen+Kaku+Gothic+Antique:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&family=Zen+Kaku+Gothic+Antique:wght@300;400;500&display=swap");
 
 body {
   font-family: "Zen Kaku Gothic Antique", sans-serif;
@@ -128,85 +207,98 @@ body {
   color: #000;
 }
 
-/* ----------------------- SECCIÓN INTRO/OBJETIVOS ----------------------- */
 .info-section {
-  position: relative;
-  width: 100%;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  background-image: 
-    linear-gradient(white 0 0),
-    repeating-linear-gradient(#dcdcdc 0 1px, transparent 1px 40px),
-    repeating-linear-gradient(90deg, #dcdcdc 0 1px, transparent 1px 40px);
-  background-blend-mode: multiply;
-  background-size: cover;
-  padding: 120px 0;
+  justify-content: center;
+
+  /* Fondo de cuadrícula */
+  background-image: linear-gradient(to right, #ccc 1px, transparent 1px),
+    linear-gradient(to bottom, #ccc 1px, transparent 1px);
+  background-size: 40px 40px;
+  padding: 100px 20px;
 }
 
-/* Contenedor para colocar los cuadros */
 .info-cards {
   display: flex;
-  gap: 100px;
-  position: relative;
+  flex-direction: column;
+  gap: 80px;
+  align-items: center;
 }
 
-/* ----------------------- TARJETAS ----------------------- */
 .card {
-  width: 450px;
-  padding: 35px 40px;
-  border-radius: 30px;
-  border-color: #000;
+  width: 400px;
+  aspect-ratio: 1 / 1;
+  border-radius: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  transition: transform 0.3s ease;
+  color: #222;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* TARJETAS CON COLORES INDIVIDUALES */
+.card.intro {
+  background-color: #ff6f61;
+  color: #fff;
+  font-weight: 500;
+}
+
+.card.objetivos {
+  background-color: #4b9cd3;
+  color: #fff;
+  font-weight: 500;
 }
 
 .card h2 {
-  font-family: 'Zen Dots', cursive;
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 2rem;
   color: #000;
-  font-size: 2.5rem;
-  margin-bottom: 3%;
-  margin-top: 4%;
 }
 
-/* Azul (Introducción) */
-.card.intro {
-  background-color: #9cd5e9;
-  position: relative;
-  top: -50px; /* ligeramente más arriba */
+.card p,
+.card ol {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
 }
 
-.card.intro p {
-  font-family: 'Zen Kaku Gothic Antique', sans-serif;
-  font-weight: 100;
+.card:hover {
+  transform: scale(1.05);
 }
 
-/* Amarillo (Objetivos) */
-.card.objetivos {
-  background-color: #f3cd33;
-  position: relative;
-  top: 50px; /* ligeramente más abajo */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+    padding: 40px;
+  }
+
+  .card h2 {
+    font-size: 1.5rem;
+  }
+
+  .card p,
+  .card ol {
+    font-size: 1rem;
+  }
+
+  .info-section {
+    padding: 60px 20px;
+  }
+
+  .info-cards {
+    gap: 50px;
+  }
 }
 
-/* ----------------------- LISTA OBJETIVOS ----------------------- */
-.card.objetivos ol {
-  margin-left: 20px;
-  margin-top: 10px;
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-
-.card.objetivos li {
-  margin-bottom: 5px;
-  font-family: 'Zen Kaku Gothic Antique', sans-serif;
-  font-weight: 100;
-}
-
-.card.objetivos p {
-  font-family: 'Zen Kaku Gothic Antique', sans-serif;
-  font-weight: 100;
-}
-
-/* === SECCIÓN WEB 1 === */
 /* === SECCIÓN WEB 1 === */
 .web1-section {
   margin: auto;
@@ -217,7 +309,7 @@ body {
 
 .web1-title {
   font-size: 3rem;
-  font-family: 'Zen dots', sans-serif;
+  font-family: "Zen dots", sans-serif;
   font-weight: 500;
   font-size: 3rem;
   font-weight: 800;
@@ -227,7 +319,6 @@ body {
   text-align: left;
 }
 
-/* === GALERÍA WEB 1 === */
 .web1-gallery {
   display: flex;
   flex-direction: column;
@@ -237,7 +328,6 @@ body {
   margin-top: 10%;
 }
 
-/* Imagen principal grande */
 .main-img {
   width: 100%;
   max-width: 900px;
@@ -251,7 +341,6 @@ body {
   transform: scale(1.03);
 }
 
-/* Fila de imágenes pequeñas */
 .web1-row {
   display: flex;
   justify-content: center;
@@ -261,7 +350,7 @@ body {
 }
 
 .small-img {
-  width: calc(50% - 7px); /* Dos imágenes perfectamente alineadas */
+  width: calc(50% - 7px);
   border-radius: 10px;
   object-fit: cover;
   transition: transform 0.3s ease;
@@ -272,7 +361,6 @@ body {
   transform: scale(1.05);
 }
 
-/* === RESPONSIVE === */
 @media (max-width: 800px) {
   .main-img {
     width: 100%;
@@ -288,9 +376,6 @@ body {
   }
 }
 
-
-
-/* === ACORDEÓN === */
 .web1-accordion details {
   background: #c2c2c2;
   margin-bottom: 10px;
@@ -299,7 +384,7 @@ body {
 }
 
 .web1-accordion summary {
-  font-family: 'Zen Dots', sans-serif;
+  font-family: "Zen Dots", sans-serif;
   font-weight: 500;
   padding: 15px 20px;
   cursor: pointer;
@@ -325,14 +410,12 @@ body {
   line-height: 1.5;
 }
 
-/* Responsive */
 @media (max-width: 700px) {
   .web1-img {
-    width: 45%;
+    width: 80%;
   }
 }
 
-/* === GALERÍA WEB 2 === */
 .web2-section {
   margin: auto;
   background-image: url("https://ik.imagekit.io/ipze59mvl/Textura_papel.jpg?updatedAt=1760557385995");
@@ -349,7 +432,6 @@ body {
   margin-top: 10%;
 }
 
-/* Imagen principal grande */
 .main-img2 {
   width: 100%;
   max-width: 900px;
@@ -363,7 +445,6 @@ body {
   transform: scale(1.03);
 }
 
-/* Fila de imágenes pequeñas */
 .web2-row {
   display: flex;
   justify-content: center;
@@ -373,7 +454,7 @@ body {
 }
 
 .small-img2 {
-  width: calc(50% - 7px); /* Dos imágenes perfectamente alineadas */
+  width: calc(50% - 7px);
   border-radius: 10px;
   object-fit: cover;
   transition: transform 0.3s ease;
@@ -384,7 +465,6 @@ body {
   transform: scale(1.05);
 }
 
-/* === RESPONSIVE === */
 @media (max-width: 800px) {
   .main-img2 {
     width: 100%;
@@ -400,9 +480,6 @@ body {
   }
 }
 
-
-
-/* === ACORDEÓN === */
 .web2-accordion details {
   background: #c2c2c2;
   margin-bottom: 10px;
@@ -412,7 +489,7 @@ body {
 
 .web2-title {
   font-size: 3rem;
-  font-family: 'Zen dots', sans-serif;
+  font-family: "Zen dots", sans-serif;
   font-weight: 500;
   font-size: 3rem;
   font-weight: 800;
@@ -423,7 +500,7 @@ body {
 }
 
 .web2-accordion summary {
-  font-family: 'Zen Dots', sans-serif;
+  font-family: "Zen Dots", sans-serif;
   font-weight: 500;
   padding: 15px 20px;
   cursor: pointer;
@@ -437,7 +514,7 @@ body {
 }
 
 .web2-accordion summary:hover {
-  background-color:  #b3b3b3;
+  background-color: #b3b3b3;
 }
 
 .web2-accordion p {
@@ -449,14 +526,78 @@ body {
   line-height: 1.5;
 }
 
-/* Responsive */
 @media (max-width: 700px) {
   .web2-img {
-    width: 45%;
+    width: 80%;
+  }
+}
+
+/* CARRUSEL  */
+/* carrusel dde imagenes de la web 2 */
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  width: calc(200%); /* doble porque se duplican las imágenes */
+  animation: scroll 15s linear infinite;
+}
+
+.carousel img {
+  width: 50em; /* cada imagen ocupa todo el ancho de la pantalla */
+  height: 30em; /* altura horizontal */
+  object-fit: cover; /* recorta sin deformar */
+  flex-shrink: 0;
+  border-radius: 0; /* sin bordes redondeados */
+}
+
+/* Animación para desplazamiento continuo */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .carousel img {
+    width: 35em;
+    height: 22em;
+  }
+  .carousel-track {
+    animation: scroll 20s linear infinite; /* un poco más lento */
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel img {
+    width: 28em;
+    height: 18em;
+  }
+  .carousel-track {
+    animation: scroll 25s linear infinite;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel img {
+    width: 100vw; /* ocupa todo el ancho del dispositivo */
+    height: 14em; /* altura más compacta */
+  }
+  .carousel-track {
+    width: calc(200%);
+    animation: scroll 30s linear infinite; /* más suave en móviles */
   }
 }
 
 /* WEB 3 */
+
 .web3-section {
   margin: auto;
   background-color: #dddde0;
@@ -473,7 +614,6 @@ body {
   margin-top: 10%;
 }
 
-/* Imagen principal grande */
 .main-img3 {
   width: 100%;
   max-width: 900px;
@@ -487,7 +627,6 @@ body {
   transform: scale(1.03);
 }
 
-/* Fila de imágenes pequeñas */
 .web3-row {
   display: flex;
   justify-content: center;
@@ -497,7 +636,7 @@ body {
 }
 
 .small-img3 {
-  width: calc(50% - 7px); /* Dos imágenes perfectamente alineadas */
+  width: calc(50% - 7px);
   border-radius: 10px;
   object-fit: cover;
   transition: transform 0.3s ease;
@@ -508,7 +647,6 @@ body {
   transform: scale(1.05);
 }
 
-/* === RESPONSIVE === */
 @media (max-width: 800px) {
   .main-img3 {
     width: 100%;
@@ -524,8 +662,6 @@ body {
   }
 }
 
-
-
 /* === ACORDEÓN === */
 .web3-accordion details {
   background: #c2c2c2;
@@ -536,7 +672,7 @@ body {
 
 .web3-title {
   font-size: 3rem;
-  font-family: 'Zen dots', sans-serif;
+  font-family: "Zen dots", sans-serif;
   font-weight: 500;
   font-size: 3rem;
   font-weight: 800;
@@ -547,7 +683,7 @@ body {
 }
 
 .web3-accordion summary {
-  font-family: 'Zen Dots', sans-serif;
+  font-family: "Zen Dots", sans-serif;
   font-weight: 500;
   padding: 15px 20px;
   cursor: pointer;
@@ -562,7 +698,7 @@ body {
 }
 
 .web3-accordion summary:hover {
-  background-color: #b3b3b3 ;
+  background-color: #b3b3b3;
 }
 
 .web3-accordion p {
@@ -574,10 +710,9 @@ body {
   line-height: 1.5;
 }
 
-/* Responsive */
 @media (max-width: 700px) {
   .web3-img {
-    width: 45%;
+    width: 80%;
   }
 }
 
@@ -598,7 +733,6 @@ body {
   margin-top: 10%;
 }
 
-/* Imagen principal grande */
 .main-img4 {
   width: 100%;
   max-width: 900px;
@@ -612,7 +746,6 @@ body {
   transform: scale(1.03);
 }
 
-/* Fila de imágenes pequeñas */
 .web4-row {
   display: flex;
   justify-content: center;
@@ -622,7 +755,7 @@ body {
 }
 
 .small-img4 {
-  width: calc(50% - 7px); /* Dos imágenes perfectamente alineadas */
+  width: calc(50% - 7px);
   border-radius: 10px;
   object-fit: cover;
   transition: transform 0.3s ease;
@@ -633,7 +766,6 @@ body {
   transform: scale(1.05);
 }
 
-/* === RESPONSIVE === */
 @media (max-width: 800px) {
   .main-img4 {
     width: 100%;
@@ -649,8 +781,6 @@ body {
   }
 }
 
-
-
 /* === ACORDEÓN === */
 .web4-accordion details {
   background: #c2c2c2;
@@ -661,7 +791,7 @@ body {
 
 .web4-title {
   font-size: 3rem;
-  font-family: 'Zen dots', sans-serif;
+  font-family: "Zen dots", sans-serif;
   font-weight: 500;
   font-size: 3rem;
   font-weight: 800;
@@ -672,7 +802,7 @@ body {
 }
 
 .web4-accordion summary {
-  font-family: 'Zen Dots', sans-serif;
+  font-family: "Zen Dots", sans-serif;
   font-weight: 500;
   padding: 15px 20px;
   cursor: pointer;
@@ -686,7 +816,7 @@ body {
 }
 
 .web4-accordion summary:hover {
-  background-color:  #b3b3b3;
+  background-color: #b3b3b3;
 }
 
 .web4-accordion p {
@@ -698,34 +828,38 @@ body {
   line-height: 1.5;
 }
 
-/* Responsive */
 @media (max-width: 700px) {
   .web4-img {
-    width: 45%;
+    width: 80%;
   }
 }
 
+/* === FOOTER === */
 
-
-/* 
- FOOTER */
 /* ===== BLOQUE VERDE PRINCIPAL ===== */
 .bloque-verde {
-  background-color: #4DBA89;
+  background-color: #4dba89;
   color: white;
   position: relative;
-  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
   overflow: hidden;
   margin-top: 5%;
+  padding: 5% 5% 2% 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100vw;
 }
 
-/* Menú lateral */
+/* === MENÚ LATERAL === */
+
 .menu-lateral {
   position: absolute;
-  left: 15%;
+  left: 10%;
   top: 100px;
 }
-
 
 .menu-lateral ul {
   list-style: none;
@@ -734,28 +868,43 @@ body {
 }
 
 .menu-lateral li {
-  font-family: 'Zen Dots', sans-serif;
-  font-size: 2.5rem;
-  padding: 1.5rem;
+  font-family: "Zen Dots", sans-serif;
+  font-size: 2.2rem;
+  padding: 1.2rem 0;
   line-height: 1rem;
   color: white;
   letter-spacing: 1px;
   transition: color 0.3s ease;
 }
 
-ul li:hover {
-  color: #E7A55F;
+.menu-lateral li:hover {
+  color: #e7a55f;
 }
 
-/* Título e imagen */
+.menu-lateral a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.menu-lateral a:hover {
+  text-decoration: underline; /* solo subrayado al pasar el mouse */
+}
+
+/* === CONTENIDO CENTRAL === */
 .contenido-titulo {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 40%;
+  gap: 40px;
   padding-top: 5%;
   padding-bottom: 5%;
-  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.ilustracion {
+  text-align: center;
 }
 
 .ilustracion h1 {
@@ -763,52 +912,140 @@ ul li:hover {
   color: black;
   font-weight: bold;
   font-size: 3rem;
-  font-family: 'Zen Dots', cursive;
+  font-family: "Zen Dots", cursive;
   transition: color 0.3s ease;
-
+  margin-bottom: 0.5rem;
 }
 
 .ilustracion h2 {
-  font-family: 'Poppins', sans-serif;
-  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
   font-weight: 100;
   font-size: 1.5rem;
-  font-weight: normal;
   color: white;
-
+  margin-bottom: 1rem;
 }
 
 .ilustracion img {
   width: 400px;
   height: auto;
-  right: 60%;
+  transition: transform 0.3s ease;
 }
 
-/* Footer dentro del bloque verde */
+.ilustracion img:hover {
+  transform: scale(1.03);
+}
+
+/* === FOOTER DENTRO DEL BLOQUE VERDE === */
 .footer-verde {
   padding: 10px 40px;
   display: flex;
   justify-content: left;
-  font-size: 1.5rem;
-  color: #FDD823;
+  font-size: 1.3rem;
+  color: #fdd823;
   padding-bottom: 1.5%;
 }
 
-
-/* Franja blanca con estrellas */
-.footer-stars {
-  background-color: white;
-  color: #9CD5E9;
-  text-align: center;
-  font-size: 3rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 50;
-  white-space: nowrap; /* Evita saltos de línea */
-  overflow: hidden; /* Oculta las estrellas que no caben */
-  display: block;
-  padding: 7x 0;
+html {
+  scroll-behavior: smooth;
 }
 
- html {
-  scroll-behavior: smooth;
+/* === RESPONSIVE DESIGN === */
+
+@media (max-width: 1024px) {
+  .menu-lateral {
+    left: 5%;
+  }
+
+  .menu-lateral li {
+    font-size: 2rem;
+  }
+
+  .ilustracion img {
+    width: 350px;
+  }
+
+  .ilustracion h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .bloque-verde {
+    padding: 8% 5%;
+  }
+
+  .menu-lateral {
+    position: static;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .menu-lateral ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menu-lateral li {
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+  }
+
+  .contenido-titulo {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .ilustracion img {
+    width: 320px;
+  }
+
+  .footer-verde {
+    justify-content: center;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  .footer-stars {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .ilustracion h1 {
+    font-size: 2rem;
+  }
+
+  .ilustracion h2 {
+    font-size: 1.2rem;
+  }
+
+  .menu-lateral li {
+    font-size: 1rem;
+  }
+
+  .ilustracion img {
+    width: 250px;
+  }
+
+  .footer-stars {
+    font-size: 1.8rem;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.bloque-verde,
+.contenido-titulo,
+.menu-lateral,
+.ilustracion {
+  max-width: 100vw;
+  overflow-x: hidden;
 }
